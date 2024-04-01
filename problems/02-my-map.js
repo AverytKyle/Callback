@@ -17,7 +17,15 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 *******************************************************************************/
 
 function myMap(array, cb) {
-    // Your code here 
+    const newArr = []
+    for(let ele of array) {
+        newArr.push(cb(ele))
+    } 
+    return newArr
+}
+
+let newFunc = (ele) => {
+    return ele.toUpperCase() + '!'
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
