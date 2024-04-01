@@ -22,7 +22,13 @@ console.log(test); // ['LAIKA', 'BELKA']
 *******************************************************************************/
 
 function myForEach(array, cb) {
-    // Your code here 
+     for (let str of array) {
+        cb(str)
+    }
+}
+
+const getIndex = (el, i) => {
+    console.log(el + ' is at index ' + i)
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
