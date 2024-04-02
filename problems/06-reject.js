@@ -22,7 +22,16 @@ console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth'
 *******************************************************************************/
 
 function reject(array, cb) {
-  // Your code here 
+  let newArr = []
+  for(let ele of array) {
+    if(cb(ele) === false) {
+      newArr.push(ele)
+    }
+  } return newArr
+}
+
+const opposite = (ele) => {
+  return ele % 2 === 0
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
