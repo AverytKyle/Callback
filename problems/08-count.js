@@ -27,7 +27,18 @@ console.log(result4); // 0
 *******************************************************************************/
 
 function count(array, cb) {
-  // Your code here 
+  let count = 0
+  for (let num of array) {
+    if(cb(num) === true) {
+      count++
+    }
+  } return count
+}
+
+const isTrue = (num) => {
+  if(num % 2 === 0) {
+    return true
+  }return false
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
