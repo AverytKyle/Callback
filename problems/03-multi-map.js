@@ -22,14 +22,11 @@ console.log(result3); // hi!!!!!
 *******************************************************************************/
 
 function multiMap(val, n, cb) {
-    return cb(val, n)
+    for (let i = 0; i < n; i++) {
+      val = cb(val)      
+    } return val
 }
 
-const multiply = (val, n) => {
-    for (let nums of n) {
-      return val;
-    }
-}
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
