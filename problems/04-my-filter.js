@@ -20,17 +20,7 @@ console.log(result2);      // ['choose', 'words', 'only']
 *******************************************************************************/
 
 function myFilter(array, cb) {
-    let newArr = []
-    for(let ele of array) {
-        if (cb(ele)) {
-            newArr.push(ele)
-        }
-    } return newArr
-}
 
-const addEle = (ele) => {
-    if(ele.length > 3) return true
-    return false
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
