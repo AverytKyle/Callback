@@ -38,7 +38,17 @@ console.log(result6);   // true
 *******************************************************************************/
 
 function one(array, cb) {
-  // Your code here 
+  let count = 0
+  for (let i = 0; i < array.length; i++) {
+    let ele = array[i];
+
+    if(cb(ele,i) === true) {
+      count++
+    }
+  }
+  if(count === 1) {
+    return true
+  } return false
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
