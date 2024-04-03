@@ -39,25 +39,14 @@ function suffixCipher(sentence, cipher) {
   for (let word of splitSent) {
     for (let key in cipher) {
       if (word.endsWith(key)) {
-        sentArr.push(cipher.apply(this, word))
-        console.log(sentArr)
-      } else {
-        sentArr.push(word)
-      }
-    }
-  }
+        sentArr.push(cipher[key](word))
+      } 
+    } 
+    sentArr.push(word)
+  } 
   return sentArr.join(" ")
 }
 
-let cipher1 = {
-  ly: function(word) {
-      return word.slice(0, -1) + 'ee';
-  },
-  ize: function(word) {
-      return word + 'r';
-  }
-};
-console.log(suffixCipher('quietly and gently visualize', cipher1));
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
