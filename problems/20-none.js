@@ -29,7 +29,14 @@ console.log(result4);   // false
 *******************************************************************************/
 
 function none(array, cb) {
-  // Your code here 
+  let count = 0
+  for (let ele of array) {
+    if(cb(ele) === true) {
+      count++
+    }
+  } if (count > 0) {
+    return false
+  } return true
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
